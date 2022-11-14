@@ -11,7 +11,6 @@ import { getAllCourses} from "../Courses/courses-api"
 
 const CourseStudents = () => {
     const id = useParams().id
-
     const [selectedStudents, setSelectedStudents] = useState([])
     const {error, loading} = useHttp(getAllCourses)
     const {send: deleteStudent} = useHttp(deleteStudentHandler)

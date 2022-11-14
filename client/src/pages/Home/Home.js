@@ -3,6 +3,7 @@ import Layout from "../../components/Layout";
 import styles from "./Home.module.css"
 import {useNavigate} from "react-router-dom"
 import Sidebar from "../../components/Sidebar";
+import BasicTable from "../../components/TableList";
  
 const Home = () => {
     const verifyStorage = localStorage.getItem("isAuth")
@@ -28,9 +29,7 @@ const Home = () => {
                     </div>}
                 </>
                 :
-                <div className={styles.link}>
-                    <Link to="/auth/login">Login</Link>
-                </div>
+                <BasicTable className={styles.table}/>
             }
         </div>
             </div>

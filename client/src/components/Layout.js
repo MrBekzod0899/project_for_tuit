@@ -19,18 +19,16 @@ const Layout = params => {
         <>
         <nav>
             <img src={img1} alt="logo"/>
-            <h2>Computer Ingineering</h2>
+            <a>Computer Ingineering</a>
             <div className={styles.links}>
-                <Link className={styles.link} to={"/courses"}>Subjects</Link>
-                <Link className={styles.link} to={"/"}>Home</Link>
+                <Link className={styles.link} to={"/courses"}>Articles</Link>
                 <Link className={styles.link} to={"/students"}>Teachers</Link>
+                <Link className={styles.link} to={"/students"}>Subjects</Link>
+                <Link className={styles.link} to={"/auth/login"}>Login</Link>
             </div>
-            <Navbar title={params.title}/>
             <div className={styles.rightSide}>
-                <VscBellDot size={25}/>
-                <p>Jones Ferdinand</p>
                 <img src={img2} alt="avatar"/>
-                <button onClick={logoutHandler} className={styles.logout}>Log out <TbLogout size={25}/></button>
+                <button onClick={logoutHandler} className={styles.logout}>Log out <TbLogout size={24}/></button>
             </div>
         </nav>
         <div className={styles.container}>
